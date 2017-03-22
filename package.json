@@ -1,0 +1,61 @@
+{
+  "name": "egg-qcloud-weapp-sdk",
+  "version": "1.2.0",
+  "description": "egg的腾讯云微信小程序SDK插件",
+  "eggPlugin": {
+    "name": "qcloudWeappSDK"
+  },
+  "keywords": [
+    "egg",
+    "eggPlugin",
+    "egg-plugin"
+  ],
+  "dependencies": {
+    "co": "^4.6.0",
+    "es6-promisify": "^5.0.0",
+    "request": "^2.75.0"
+  },
+  "devDependencies": {
+    "autod": "^2.7.1",
+    "egg": "^1.0.0-rc.2",
+    "egg-bin": "^2.2.3",
+    "egg-ci": "^1.3.0",
+    "egg-mock": "^3.0.1",
+    "eslint": "^3.16.1",
+    "eslint-config-egg": "^3.2.0",
+    "supertest": "^3.0.0",
+    "webstorm-disable-index": "^1.1.2"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "scripts": {
+    "test": "npm run lint -- --fix && npm run test-local",
+    "test-local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "lint": "eslint .",
+    "ci": "npm run lint && npm run cov",
+    "autod": "autod"
+  },
+  "files": [
+    "index.js",
+    "app.js",
+    "agent.js",
+    "config",
+    "app",
+    "lib"
+  ],
+  "ci": {
+    "version": "6, 7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eggjs/egg-qcloud-weapp-sdk.git"
+  },
+  "bugs": {
+    "url": "https://github.com/eggjs/egg/issues"
+  },
+  "homepage": "https://github.com/eggjs/egg-qcloud-weapp-sdk#readme",
+  "author": "Seasonstar",
+  "license": "MIT"
+}

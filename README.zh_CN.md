@@ -24,45 +24,42 @@
 Description here.
 -->
 
-## Install
+## 依赖说明
 
-```bash
-$ npm i egg-qcloud-weapp-sdk --save
-```
+### 依赖的 egg 版本
 
-## Usage
+egg-qcloud-weapp-sdk 版本 | egg 1.x
+--- | ---
+1.x | 😁
+0.x | ❌
+
+### 依赖的插件
+<!--
+
+如果有依赖其它插件，请在这里特别说明。如
+
+- security
+- multipart
+
+-->
+
+## 开启插件
 
 ```js
-// {app_root}/config/plugin.js
+// config/plugin.js
 exports.qcloudWeappSDK = {
   enable: true,
   package: 'egg-qcloud-weapp-sdk',
 };
 ```
 
-## Configuration
 
-```js
-// {app_root}/config/config.default.js
-exports.qcloudWeappSDK = {
-  serverHost: '',
-  authServerUrl: '',
-  tunnelServerUrl: '',
-  tunnelSignatureKey: '',
-  tunnelCheckSignature: true,
-  networkTimeout: 30000,
-};
-```
+## 使用场景
 
-- Why and What: Due to [wafer-node-server-sdk](https://github.com/tencentyun/wafer-node-server-sdk) is for Express，but eggjs is based on Koa, so, you know... This plugin solves the problem.
+- Why and What: 由于[wafer-node-server-sdk](https://github.com/tencentyun/wafer-node-server-sdk)最初是为express框架设计的SDK，而eggjs基于koa框架开发，所以会报错。这个插件就是用来解决这个问题。
+- Note: 信道服务暂不支持
 
-- Note: Tunnel service is not supported now.
-
-see [config/config.default.js](config/config.default.js) for more detail.
-
-## Example
-
-<!-- example here -->
+- How: 具体的示例代码:
 
 ```js
 // app/controller/weapp.js
@@ -96,9 +93,28 @@ module.exports = app => {
 };
 ```
 
-## Questions & Suggestions
+## 详细配置
 
-Please open an issue [here](https://github.com/eggjs/egg/issues).
+请到 [config/config.default.js](config/config.default.js) 查看详细配置项说明。
+```js
+// {app_root}/config/config.default.js
+exports.qcloudWeappSDK = {
+  serverHost: '',
+  authServerUrl: '',
+  tunnelServerUrl: '',
+  tunnelSignatureKey: '',
+  tunnelCheckSignature: true,
+  networkTimeout: 30000,
+};
+```
+
+## 单元测试
+
+<!-- 描述如何在单元测试中使用此插件，例如 schedule 如何触发。无则省略。-->
+
+## 提问交流
+
+请到 [egg issues](https://github.com/eggjs/egg/issues) 异步交流。
 
 ## License
 
