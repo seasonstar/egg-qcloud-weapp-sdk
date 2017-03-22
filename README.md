@@ -54,7 +54,7 @@ exports.qcloudWeappSDK = {
 };
 ```
 
-- Why and What: Due to [wafer-node-server-sdk](https://github.com/tencentyun/wafer-node-server-sdk) is for Express，but eggjs is based on Koa, so, you know... This plugin solves the problem.
+- Why and What: [wafer-node-server-sdk](https://github.com/tencentyun/wafer-node-server-sdk) is for Express，but eggjs is based on Koa.  so, you know.. This plugin comes out to solve the problem.
 
 - Note: Tunnel service is not supported now.
 
