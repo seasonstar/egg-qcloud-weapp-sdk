@@ -6,7 +6,10 @@
  * @property {String} SOME_KEY - some description
  */
 exports.qcloudWeappSDK = {
-  appId: '',
-  appSecret: '',
+  serverHost: '',
+  authServerUrl: '',
+  tunnelServerUrl: '',
+  tunnelSignatureKey: '',
+  tunnelCheckSignature: true,
   networkTimeout: 30000,
 };

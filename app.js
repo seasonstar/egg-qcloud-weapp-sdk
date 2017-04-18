@@ -6,10 +6,12 @@ module.exports = app => {
   const config = app.config.qcloudWeappSDK;
 
   qcloud.config({
-    AppId: config.appId,
-    AppSecret: config.appSecret,
+    ServerHost: config.serverHost,
+    AuthServerUrl: config.authServerUrl,
+    TunnelServerUrl: config.tunnelServerUrl,
+    TunnelSignatureKey: config.tunnelSignatureKey,
+    TunnelCheckSignature: config.tunnelCheckSignature,
     NetworkTimeout: config.networkTimeout,
-    Redis: app.sessionStore,
   });
 
   app.qcloudWeapp = qcloud;
